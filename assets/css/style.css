@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
 
-html {
+html body {
     font-family:"Concert One", sans-serif;
-
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
+/*------Navbar---------*/
 #navbar {
     width: 100%;
     height: 90px;
@@ -23,9 +26,44 @@ html {
 
 @media screen and (max-width: 1117px) {
     #navbar h2 {
-        font-size: 100%
+        font-size: 100%;
+    }
+
+    footer {
+         bottom: 0
+    }
+
+    .cards {
+        width: 70px !important;
+        height: 90px !important;
+
     }
 }
+/*---------------Timer---------------*/
+.time-left {
+    grid-column: 1 / -1;
+    justify-content: center;
+    font-family: "Concert One",sans-serif;
+    color: #0E7A0D;
+    font-size: 30px;
+}
+
+/*---------------Cards---------------*/
+
+.cards {
+    height: 130px;
+    width: 110px;
+    border-radius: 5px;
+    background-color: #0E7A0D;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+    width: fit-content; 
+}
+
 /*---------------Footer---------------*/
 
 footer {
@@ -33,12 +71,9 @@ footer {
     height: 60px;
     background-color: #0E7A0D;
     bottom: 0;
+    position: absolute;
 }
 
-.footer-position {
-    position: absolute;
-    margin-bottom: 0
-}
 
 footer h3 {
     color: #fff
