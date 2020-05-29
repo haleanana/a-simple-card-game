@@ -2,6 +2,7 @@
 
 html {
     font-family:"Concert One", sans-serif;
+
 }
 
 #navbar {
@@ -24,4 +25,21 @@ html {
     #navbar h2 {
         font-size: 100%
     }
+}
+/*---------------Footer---------------*/
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #0E7A0D;
+    bottom: 0;
+}
+
+.footer-position {
+    position: absolute;
+    margin-bottom: 0
+}
+
+footer h3 {
+    color: #fff
 }
