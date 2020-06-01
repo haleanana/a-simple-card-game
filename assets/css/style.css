@@ -92,3 +92,11 @@ footer {
 footer h3 {
     color: #fff
 }
+
+footer i {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    font-size: 200%;
+    top: 30%;
+}
