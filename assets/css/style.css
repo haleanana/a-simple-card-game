@@ -64,6 +64,20 @@ html body {
     width: fit-content; 
 }
 
+.cards i {
+    font-size: 36px;
+    color: #fff;
+
+}
+
+.card-back {
+    justify-content: center;
+    top: 35%;
+    position: relative;
+    /* bottom: 50%; */
+    text-align: center;
+}
+
 /*---------------Footer---------------*/
 
 footer {
