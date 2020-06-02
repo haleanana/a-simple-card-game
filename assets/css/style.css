@@ -24,6 +24,10 @@ html body {
     padding-top: 30px
 }
 
+.header-title h2 span {
+    padding-left: 10px;
+}
+
 @media screen and (max-width: 1117px) {
     #navbar h2 {
         font-size: 100%;
@@ -78,6 +82,10 @@ html body {
     text-align: center;
 }
 
+.card-back i:hover {
+ transition: transform 1.2s linear;
+  transform: rotate(360deg);
+}
 /*---------------Footer---------------*/
 
 footer {
@@ -93,10 +101,11 @@ footer h3 {
     color: #fff
 }
 
-footer i {
+/*footer i {
     position: absolute;
     right: 10px;
     color: #fff;
     font-size: 200%;
     top: 30%;
 }
+*/
