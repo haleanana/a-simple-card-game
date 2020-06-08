@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
 
-html body {
-    font-family:"Concert One", sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0; 
+}
+
+html {
+    min-height: 100vh;
 }
 
 /*------Navbar---------*/
@@ -44,9 +50,13 @@ html body {
     }
 }
 /*---------------Timer---------------*/
-.time-left {
-    grid-column: 1 / -1;
-    justify-content: center;
+
+.timer-info-container {
+    grid-column: 1/-1;
+    text-align: center;
+
+}
+.time-info {
     font-family: "Concert One",sans-serif;
     color: #0E7A0D;
     font-size: 30px;
@@ -54,31 +64,65 @@ html body {
 
 /*---------------Cards---------------*/
 
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+
+}
+
+
 .cards {
     height: 130px;
     width: 110px;
     border-radius: 5px;
     background-color: #0E7A0D;
+    position: relative;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    grid-gap: 10px;
-    width: fit-content; 
+.card-shared-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility:hidden;
 }
 
 .cards i {
     font-size: 36px;
     color: #fff;
+}
+
+.cards.show-front .card-back{
+    transform: rotateY(180deg)
 
 }
 
+.cards.show-front .card-front {
+    transform: rotateY(0)
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background:#fff;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 5px;
+    border: 2px solid #0E7A0D
+
+}
+
+.card-front img{
+    height: 50%;
+    width: 80%;
+}
 .card-back {
     justify-content: center;
     top: 35%;
     position: relative;
-    /* bottom: 50%; */
     text-align: center;
 }
 
