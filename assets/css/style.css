@@ -70,6 +70,7 @@ html {
     grid-gap: 10px;
     margin: 50px;
     justify-content: center;
+    perspective: 500px;
 
 }
 
@@ -96,7 +97,7 @@ html {
 }
 
 .cards.show-front .card-back{
-    transform: rotateY(180deg)
+    transform: rotateY(-180deg);
 
 }
 
@@ -126,10 +127,12 @@ html {
     text-align: center;
 }
 
-.card-back i:hover {
+/*.card-back i:hover {
  transition: transform 1.2s linear;
   transform: rotate(360deg);
 }
+
+*/
 /*---------------Footer---------------*/
 
 footer {
