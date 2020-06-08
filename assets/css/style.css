@@ -71,6 +71,7 @@ html {
     margin: 50px;
     justify-content: center;
     perspective: 500px;
+    margin-top: 0;
 
 }
 
@@ -127,12 +128,11 @@ html {
     text-align: center;
 }
 
-/*.card-back i:hover {
+.card-back i:hover {
  transition: transform 1.2s linear;
   transform: rotate(360deg);
 }
 
-*/
 /*---------------Footer---------------*/
 
 footer {
