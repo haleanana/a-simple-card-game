@@ -43,7 +43,7 @@ html {
          bottom: 0
     }
 
-    .cards {
+    .card {
         width: 70px !important;
         height: 90px !important;
 
@@ -76,7 +76,7 @@ html {
 }
 
 
-.cards {
+.card {
     height: 130px;
     width: 110px;
     border-radius: 5px;
@@ -92,17 +92,17 @@ html {
     backface-visibility:hidden;
 }
 
-.cards i {
+.card i {
     font-size: 36px;
     color: #fff;
 }
 
-.cards.show-front .card-back{
+.card.show-front .card-back{
     transform: rotateY(-180deg);
 
 }
 
-.cards.show-front .card-front {
+.card.show-front .card-front {
     transform: rotateY(0)
 }
 

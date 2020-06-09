@@ -1,6 +1,6 @@
 class SimpleMemoryGame {
-    constructor (time, card) {
-        this.cardsArray = card;
+    constructor (time, cards) {
+        this.cardsArray = cards;
         this.time = time;
         this.timeLeft= time;
         this.timer = document.getElementById("time-left");
@@ -14,8 +14,8 @@ class SimpleMemoryGame {
 
     }
 
-    flip() {
-        if (this.cardIsFlippable(cards)){
+    flip(card) {
+        if (this.cardIsFlippable(card)){
             card.classList.add("show-front");
         }
 
@@ -37,12 +37,12 @@ if (document.readyState === "loading") {
 }
 
 function gameReady() {
-    let card = Array.from(document.getElementsByClassName("cards"));
-    let game = new SimpleMemoryGame (60, card);
+    let cards = Array.from(document.getElementsByClassName("card"));
+    let game = new SimpleMemoryGame (60, cards);
 
-    card.forEach(cards => {
-        cards.addEventListener("click" , () => {
-            game.flip (cards);
+    cards.forEach(card =>{
+        card.addEventListener("click" , () => {
+            game.flip (card);
         });
     });
-}   
+}  
