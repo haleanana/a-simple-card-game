@@ -50,7 +50,7 @@ html {
     }
 }
 
-#start{
+.start{
     background: green;
 }
 /*---------------Timer---------------*/
@@ -94,6 +94,7 @@ html {
     align-items: center;
     overflow: hidden;
     backface-visibility:hidden;
+    transition: transform 500ms ease-in-out
 }
 
 .card i {
@@ -107,7 +108,7 @@ html {
 }
 
 .card.show-front .card-front {
-    transform: rotateY(0)
+    transform: rotateY(0);
 }
 
 .card-front {
@@ -130,6 +131,7 @@ html {
     top: 35%;
     position: relative;
     text-align: center;
+    transform: rotateY(0);
 }
 
 .card-back i:hover {

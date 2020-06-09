@@ -10,10 +10,19 @@ class SimpleMemoryGame {
         this.cardToCheck = null;
         this.timeLeft = this.time;
         this.matches = [];
-        this.busy = true;
+        this.busy = true
 
-        this.shuffle();
+        this.hideCards();
+        this.timer.innerText = this.timeLeft
     }
+
+    hideCards() {
+        this.cardsArray.forEach (card => {
+        card.classList.remove("show-front");
+    })
+
+    }
+
 
     flip(card) {
         if (this.cardIsFlippable(card)){
@@ -21,6 +30,16 @@ class SimpleMemoryGame {
         }
 
     }
+
+    countDown (){
+        return setInterval(() => {
+            this.timeLeft--;
+            this.timer.innerText = time.timeLeft;
+            if(this.timeLeft === 0)
+            this.gameOver();
+        }, 1000);
+    }
+
 
     shuffle() {
         for(let i = this.cardsArray.length -1; i>0; i--) {
@@ -38,13 +57,6 @@ class SimpleMemoryGame {
 }
 
 
-// Statement to check if the page has loaded 
-if (document.readyState === "loading") {
-    document.addEventListener ("DOMContentLoaded",gameReady());
-} else {
-    gameReady();
-}
-
 function gameReady() {
     let cards = Array.from(document.getElementsByClassName("card"));
     let game = new SimpleMemoryGame (60, cards);
@@ -55,3 +67,10 @@ function gameReady() {
         });
     });
 }  
+
+// Statement to check if the page has loaded 
+if (document.readyState === "loading") {
+    document.addEventListener ("DOMContentLoaded",gameReady());
+} else {
+    gameReady();
+}
