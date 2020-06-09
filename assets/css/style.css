@@ -49,6 +49,10 @@ html {
 
     }
 }
+
+#start{
+    background: green;
+}
 /*---------------Timer---------------*/
 
 .timer-info-container {

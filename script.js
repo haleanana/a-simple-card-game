@@ -12,6 +12,7 @@ class SimpleMemoryGame {
         this.matches = [];
         this.busy = true;
 
+        this.shuffle();
     }
 
     flip(card) {
@@ -19,6 +20,14 @@ class SimpleMemoryGame {
             card.classList.add("show-front");
         }
 
+    }
+
+    shuffle() {
+        for(let i = this.cardsArray.length -1; i>0; i--) {
+            let randIndex = Math.floor(Math.random() * (i+1));
+            this.cardsArray[randIndex].style.order = i; 
+            this.cardsArray [i].style.order = randIndex;
+        }
     }
 // Function to check if the user can flip the card
     cardIsFlippable(){ 
@@ -42,7 +51,7 @@ function gameReady() {
 
     cards.forEach(card =>{
         card.addEventListener("click" , () => {
-            game.flip (card);
+            game.flip(card);
         });
     });
 }  
