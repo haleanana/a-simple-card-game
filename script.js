@@ -11,9 +11,13 @@ class SimpleMemoryGame {
         this.timeLeft = this.time;
         this.matches = [];
         this.busy = true
-
-        this.hideCards();
         this.timer.innerText = this.timeLeft
+        setTimeout(()=> {
+            this.busy=false
+            this.timerStarted = this.startTimer;
+        },500);
+       
+
     }
 
     hideCards() {
@@ -21,6 +25,22 @@ class SimpleMemoryGame {
         card.classList.remove("show-front");
     })
 
+    }
+
+    gameOver(){
+        clearInterval(this.timerStarted);
+        document.getElementById("game-over-screen").classList.add("show-front");
+
+    }
+
+    startTimer(){
+        return setInterval(() => {
+            this.timeLeft-- ;
+            this.timer.innerText = this.timeLeft;
+            if (this.timeLeft === 0)
+            this.gameOver();
+
+        },1000);
     }
 
 
@@ -31,21 +51,12 @@ class SimpleMemoryGame {
 
     }
 
-    countDown (){
-        return setInterval(() => {
-            this.timeLeft--;
-            this.timer.innerText = time.timeLeft;
-            if(this.timeLeft === 0)
-            this.gameOver();
-        }, 1000);
-    }
-
-
     shuffle() {
+        
         for(let i = this.cardsArray.length -1; i>0; i--) {
-            let randIndex = Math.floor(Math.random() * (i+1));
-            this.cardsArray[randIndex].style.order = i; 
-            this.cardsArray [i].style.order = randIndex;
+            let randomise = Math.floor(Math.random() * (i+1));
+            this.cardsArray[randomise].style.order = i; 
+            this.cardsArray [i].style.order = randomise;
         }
     }
 // Function to check if the user can flip the card
@@ -56,10 +67,25 @@ class SimpleMemoryGame {
 
 }
 
+// Statement to check if the page has loaded 
+if (document.readyState === "loading") {
+    document.addEventListener ("DOMContentLoaded",gameReady());
+} else {
+    gameReady();
+}
+
 
 function gameReady() {
+    let overlays = Array.from(document.getElementsByClassName("screen-overlay"));
     let cards = Array.from(document.getElementsByClassName("card"));
-    let game = new SimpleMemoryGame (60, cards);
+    let game = new SimpleMemoryGame (5, cards);
+    
+    overlays.forEach(overlay => {
+        overlay.addEventListener("click",() =>{
+            overlay.classList.remove("show-front");
+            game.startGame()
+        });
+    });
 
     cards.forEach(card =>{
         card.addEventListener("click" , () => {
@@ -67,10 +93,3 @@ function gameReady() {
         });
     });
 }  
-
-// Statement to check if the page has loaded 
-if (document.readyState === "loading") {
-    document.addEventListener ("DOMContentLoaded",gameReady());
-} else {
-    gameReady();
-}
