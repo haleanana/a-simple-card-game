@@ -11,19 +11,21 @@ class SimpleMemoryGame {
         this.timeLeft = this.time;
         this.matches = [];
         this.busy = true
-        this.timer.innerText = this.timeLeft
         setTimeout(()=> {
-            this.busy=false
+            this.shuffle(this.cardsArray);
             this.timerStarted = this.startTimer;
+            this.busy = false;
         },500);
-       
+        this.hideCards();
+        this.timer.innerText = this.timeLeft;
+
 
     }
 
     hideCards() {
         this.cardsArray.forEach (card => {
         card.classList.remove("show-front");
-    })
+    });
 
     }
 
@@ -33,7 +35,12 @@ class SimpleMemoryGame {
 
     }
 
-    startTimer(){
+    win (){
+        clearInterval(this.timerStarted);
+        document.getElementById("you-won").classList.add("show-front");
+    }
+
+    startTimer() {
         return setInterval(() => {
             this.timeLeft-- ;
             this.timer.innerText = this.timeLeft;
@@ -47,8 +54,48 @@ class SimpleMemoryGame {
     flip(card) {
         if (this.cardIsFlippable(card)){
             card.classList.add("show-front");
+
+            if(this.cardToCheck) {
+                this.matchedCardChecker(card);
+            } else {
+              this.cardToCheck = card;
+            }
         }
 
+    }
+
+    matchedCardChecker (card){
+
+        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+            this.cardMatches(card,this.cardToCheck);
+        else
+            this.cardDoesNotMatch (card,this.cardToCheck);
+
+        this.cardToCheck = null;
+
+    }
+
+    cardMatches(card1,card2) {
+        this.matches.push(card1);
+        this.matches.push(card2);
+        if (this.matches.length === this.cardsArray.length)
+            this.win();
+
+    }
+
+    cardDoesNotMatch(card1,card2){
+        this.busy = true;
+        setTimeout(() => {
+            card1.classList.remove("show-front");
+            card2.classList.remove("show-front");
+            this.busy= false;
+        },1000
+        )
+
+    }
+
+    getCardType(card){
+        return card.getElementsByClassName("card-match")[0].src;
     }
 
     shuffle() {
@@ -59,10 +106,9 @@ class SimpleMemoryGame {
             this.cardsArray [i].style.order = randomise;
         }
     }
-// Function to check if the user can flip the card
-    cardIsFlippable(){ 
-        return true;
-        //return !this.busy && !this.matches.includes(cards) && cards !== this.cardToCheck //All statements need to return false in order for it to be true and they can flip the card
+
+   cardIsFlippable(card){ // Function to check if the user can flip the card
+        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck ;//All statements need to return false in order for it to be true and they can flip the card
     }
 
 }
@@ -78,7 +124,7 @@ if (document.readyState === "loading") {
 function gameReady() {
     let overlays = Array.from(document.getElementsByClassName("screen-overlay"));
     let cards = Array.from(document.getElementsByClassName("card"));
-    let game = new SimpleMemoryGame (5, cards);
+    let game = new SimpleMemoryGame (60, cards);
     
     overlays.forEach(overlay => {
         overlay.addEventListener("click",() =>{
