@@ -13,6 +13,35 @@ html {
     min-height: 100vh;
 }
 
+/*------Overlay Text---------*/
+
+.screen-overlay{
+    display:none;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Concert One",sans-serif;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff
+}
+
+.screen-overlay p {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.screen-overlay.show-front {
+    display: flex
+}
+
 /*------Navbar---------*/
 #navbar {
     width: 100%;
@@ -139,6 +168,8 @@ html {
   transform: rotate(360deg);
 }
 
+
+
 /*---------------Footer---------------*/
 
 footer {
@@ -154,11 +185,3 @@ footer h3 {
     color: #fff
 }
 
-/*footer i {
-    position: absolute;
-    right: 10px;
-    color: #fff;
-    font-size: 200%;
-    top: 30%;
-}
-*/

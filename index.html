@@ -12,13 +12,25 @@
 </head>
 
 <body>
-
   <div id="navbar">
-    <div class="container-fluid header-title">
-      <h2>A Simple Card Game by Hale<span><i class="fab fa-github"></i></span></h1>
+    <div class="header-title">
+      <h2>A Simple Card Game by Hale<span><i class="fab fa-github"></i></span></h2>
     </div>
+ </div>
+  <div class="screen-overlay">
+   Click anywhere to Start
+   
+   <p>Click on a card to flip it</p>
+   <p>Match 2 cards with the same image</p>
+   <p>Repeat until all cards are matched before the timer runs out</p>
+   <p>Good luck and have fun!</p>
   </div>
-  <button id="start">Start Game</button>
+  <div id="game-over-screen" class ="screen-overlay show-front">Game Over
+  <span class="small-text">Click anywhere to restart</span>
+  </div>
+  <div id="you-won"class = "screen-overlay"> You Won!
+  <span class="small-text">Click anywhere to try again</span>
+  </div>
   <div class="main-container">
     <div class="timer-info-container">
       <div class="time-info">
