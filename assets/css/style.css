@@ -168,6 +168,7 @@ html {
     text-align: center;
     transform: rotateY(0);
     background-color: #0E7A0D;
+    border-radius: 5px;
 
 }
 
