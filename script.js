@@ -10,10 +10,10 @@ class SimpleMemoryGame {
         this.cardToCheck = null;
         this.timeLeft = this.time;
         this.matches = [];
-        this.busy = true
+        this.busy = true;
         setTimeout(()=> {
             this.shuffle(this.cardsArray);
-            this.timerStarted = this.startTimer;
+            this.timerStarted = this.startTimer();
             this.busy = false;
         },500);
         this.hideCards();
@@ -41,7 +41,7 @@ class SimpleMemoryGame {
     }
 
     startTimer() {
-        return setInterval(() => {
+            return setInterval(() => {
             this.timeLeft-- ;
             this.timer.innerText = this.timeLeft;
             if (this.timeLeft === 0)
@@ -49,6 +49,7 @@ class SimpleMemoryGame {
 
         },1000);
     }
+    
 
 
     flip(card) {
@@ -139,3 +140,4 @@ function gameReady() {
         });
     });
 }  
+
