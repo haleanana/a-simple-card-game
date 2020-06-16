@@ -6,10 +6,11 @@ class SimpleMemoryGame {
         this.timer = document.getElementById("time-left");
         
     }
+
     startGame (){
         this.cardToCheck = null;
         this.timeLeft = this.time;
-        this.matches = [];
+        this.matches = []; 
         this.busy = true;
         setTimeout(()=> {
             this.shuffle(this.cardsArray);
@@ -22,12 +23,15 @@ class SimpleMemoryGame {
 
     }
 
+    //Goes through all the cards to remove the "show-front" class at the start of every game
+
     hideCards() {
         this.cardsArray.forEach (card => {
         card.classList.remove("show-front");
     });
 
     }
+
 
     gameOver(){
         clearInterval(this.timerStarted);
@@ -40,18 +44,19 @@ class SimpleMemoryGame {
         document.getElementById("you-won").classList.add("show-front");
     }
 
+    //Timer with if statement to trigger gameOver function when it is equal to 0. 
+    //setInterval set at 1000 ms to replicate 1s countdown
     startTimer() {
             return setInterval(() => {
-            this.timeLeft-- ;
-            this.timer.innerText = this.timeLeft;
+            this.timeLeft-=1 ;
+            this.timer.innerHTML = this.timeLeft;
             if (this.timeLeft === 0)
             this.gameOver();
 
         },1000);
     }
     
-
-
+    //Function to check whether card can be flipped by checking other functions as conditions with an if statement 
     flip(card) {
         if (this.cardIsFlippable(card)){
             card.classList.add("show-front");
@@ -107,9 +112,10 @@ class SimpleMemoryGame {
             this.cardsArray [i].style.order = randomise;
         }
     }
-
-   cardIsFlippable(card){ // Function to check if the user can flip the card
-        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck ;//All statements need to return false in order for it to be true and they can flip the card
+   // Function to check if the user can flip the card
+   cardIsFlippable(card){ 
+   //All statements need to return false in order for it to be true so they can flip the card
+        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck ;
     }
 
 }
@@ -125,7 +131,7 @@ if (document.readyState === "loading") {
 function gameReady() {
     let overlays = Array.from(document.getElementsByClassName("screen-overlay"));
     let cards = Array.from(document.getElementsByClassName("card"));
-    let game = new SimpleMemoryGame (60, cards);
+    let game = new SimpleMemoryGame (20, cards);
     
     overlays.forEach(overlay => {
         overlay.addEventListener("click",() =>{
