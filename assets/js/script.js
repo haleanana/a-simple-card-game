@@ -131,7 +131,7 @@ if (document.readyState === "loading") {
 function gameReady() {
     let overlays = Array.from(document.getElementsByClassName("screen-overlay"));
     let cards = Array.from(document.getElementsByClassName("card"));
-    let game = new SimpleMemoryGame (20, cards);
+    let game = new SimpleMemoryGame (60, cards);
     
     overlays.forEach(overlay => {
         overlay.addEventListener("click",() =>{
