@@ -112,7 +112,7 @@ class SimpleMemoryGame {
    // Function to check if the user can flip the card
    cardIsFlippable(card){ 
    //All statements need to return false in order for it to be true so they can flip the card
-        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck;
+        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft ==0;
     }
 
 }
