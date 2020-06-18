@@ -42,6 +42,36 @@ html {
     display: flex
 }
 
+.win-screen-overlay {
+
+    display:none!important;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Concert One",sans-serif;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff
+}
+
+.win-screen-overlay p{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.win-screen-overlay.show-front {
+    display: flex
+}
+
+
+
 .small-text {
     font-size: 25px;
 }

@@ -1,209 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A Simple Card Game by Hale</title>
+    <script
+      src="https://kit.fontawesome.com/5758f2a779.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script src="assets/js/script.js" async></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>A Simple Card Game by Hale</title>
-  <script src="https://kit.fontawesome.com/5758f2a779.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <script src="assets/js/script.js" async></script>
-</head>
+  <body>
+    <div id="navbar">
+      <div class="header-title">
+        <h2>
+          A Simple Card Game by Hale<span><i class="fab fa-github"></i></span>
+        </h2>
+      </div>
+    </div>
+    <div class="screen-overlay show-front">
+      Click anywhere to dismiss this message
 
-<body>
-  <div id="navbar">
-    <div class="header-title">
-      <h2>A Simple Card Game by Hale<span><i class="fab fa-github"></i></span></h2>
+      <p>1.Click on a card to flip it</p>
+      <p>2.Match 2 cards with the same image</p>
+      <p>3.Repeat until all cards are matched before the timer runs out</p>
+      <p>4.Good luck and have fun!</p>
     </div>
- </div>
-  <div class="screen-overlay show-front">
-   Click anywhere to Start
-   
-   <p>1.Click on a card to flip it</p>
-   <p>2.Match 2 cards with the same image</p>
-   <p>3.Repeat until all cards are matched before the timer runs out</p>
-   <p>4.Good luck and have fun!</p>
-  </div>
-  <div id="game-over-screen" class ="screen-overlay">Game Over
-  <span class="small-text">Click anywhere to restart</span>
-  </div>
-  <div id="you-won"class = "screen-overlay"> You Won!
-  <span class="small-text">Click anywhere to try again</span>
-  </div>
-  <div class="main-container">
-    <div class="timer-info-container">
-      <div class="time-info">
-        Timer:<span id="time-left">60</span>
-      </div>
+    <div id="game-over-screen" class="screen-overlay">
+      Game Over
+      <span class="small-text">Click anywhere to dismiss</span>
     </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img  class= "card-match" src="assets/images/Bison.png" alt="Bison">
-      </div>
+    <div id="you-won" class="screen-overlay">
+      You Won!
+      <span class="small-text">Click anywhere to dismiss this message</span>
     </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+    <div class="main-container">
+      <div class="timer-info-container">
+        <div class="time-info">Timer:<span id="time-left">60</span></div>
+        <button id ="start" onclick="disableButton(this)"> Start</button>
+        <button id="reStart">Restart</button>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Bison.png" alt="Bison">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Bison.png" alt="Bison" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Bison.png" alt="Bison" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Albatross.png" alt="Albatross">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Albatross.png"
+            alt="Albatross"
+          />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Alligator.png"
+            alt="Alligator"
+          />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Alligator.png" alt="Alligator">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Dino.png" alt="Dino" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Killer.png" alt="Killer" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Dino.png" alt="Dino">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Rhino.png" alt="Rhino" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Moose.png" alt="Moose" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Killer.png" alt="Killer">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Albatross.png"
+            alt="Albatross"
+          />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Alligator.png"
+            alt="Alligator"
+          />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Rhino.png" alt="Rhino">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Killer.png" alt="Killer" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Dino.png" alt="Dino" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Moose.png" alt="Moose">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Goat.png" alt="Goat" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Dragonfly.png"
+            alt="Dragonfly"
+          />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Albatross.png" alt="Albatross">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Rhino.png" alt="Rhino" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Moose.png" alt="Moose" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Alligator.png" alt="Alligator">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Goat.png" alt="Goat" />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Beaver.png" alt="Beaver" />
+        </div>
       </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Killer.png" alt="Killer">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img
+            class="card-match"
+            src="assets/images/Dragonfly.png"
+            alt="Dragonfly"
+          />
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Dino.png" alt="Dino">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Goat.png" alt="Goat">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Dragonfly.png" alt="Dragonfly">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Rhino.png" alt="Rhino">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img  class= "card-match" src="assets/images/Moose.png" alt="Moose">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Goat.png" alt="Goat">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Beaver.png" alt="Beaver">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Dragonfly.png" alt="Dragonfly">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back card-shared-style">
-        <i class="fas fa-crown"></i>
-      </div>
-      <div class="card-front card-shared-style">
-        <img class= "card-match" src="assets/images/Beaver.png" alt="Beaver">
+      <div class="card">
+        <div class="card-back card-shared-style">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="card-front card-shared-style">
+          <img class="card-match" src="assets/images/Beaver.png" alt="Beaver" />
+        </div>
       </div>
     </div>
 
-  </div>
-
-  <!--<footer class="container-fluid footer-position">
+    <!--<footer class="container-fluid footer-position">
 		<h3 class="text-center">haleanana@gmail.com</h3>
 		<i class="fab fa-github"></i>
 	</footer>-->
-</body>
-
+  </body>
 </html>
