@@ -42,34 +42,6 @@ html {
     display: flex
 }
 
-.win-screen-overlay {
-
-    display:none!important;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: "Concert One",sans-serif;
-    font-size: 50px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff
-}
-
-.win-screen-overlay p{
-    font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.win-screen-overlay.show-front {
-    display: flex
-}
-
 
 
 .small-text {
@@ -211,4 +183,22 @@ html {
   transform: rotate(360deg);
 }
 
+#gamerules{
+    width: 400px;
+    height: 200px;
+    background-color:#fff;
+    display: none;
+    top:18%;
+    bottom: 50%;
+    left: 38%;
+    right: 50%;
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    border: 10px #0E7A0D;
+    border-radius: 5px;
+    color: #0E7A0D;
+    font-family: "Concert One",sans-serif;
 
+
+}
