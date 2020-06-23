@@ -1,2 +1,3 @@
-<h2>A Simple Card Game</h2>
-<p>The goal of this project was to create something simple ,fun and interactive. A perfect game for when you have a few minutes to spare -whether you are waiting for a bus </p>
+<h2 class ="center-text">A Simple Card Game</h2>
+<hr>
+<p class ="center-text">Fun ,simple and interactive memory game. Designed for people who is always on the go to kill time and improve their memory at the same time. Whether you are waiting for your coffee or </p>

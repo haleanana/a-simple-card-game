@@ -234,3 +234,8 @@ html {
   text-decoration: none;
   cursor: pointer;
 }
+
+/*-----Readme classes----*/
+.center-text {
+    text-align: center;
+}
