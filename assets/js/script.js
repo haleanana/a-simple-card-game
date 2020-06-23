@@ -157,18 +157,13 @@ function gameReady() {
   });
 });
     
-
 }  
 
+//Function to disable start button once it is pressed
 function disableButton(){
   document.getElementById("start").disabled = true;
 
 }
-
-//function toggleRules(id) {
-    //let rules = document.getElementById(id);
-    //rules.style.display = rules.style.display == "block" ? "none" : "block";
-//}
 
 //Based on code from w3schools How to Create a Modal Box
 let rules = document.getElementById("myrules");

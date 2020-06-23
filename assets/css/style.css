@@ -67,6 +67,15 @@ html {
     color: #fff
 }
 
+#navbar h2 span i {
+    color: #fff;
+    transform: .2s;
+}
+
+#navbar h2 span i:hover {
+     transform: scale(1.5);
+}
+
 .header-title {
     padding-top: 30px
 }
@@ -183,26 +192,7 @@ html {
   transform: rotate(360deg);
 }
 
-/*#gamerules{
-    width: 400px;
-    height: 200px;
-    background-color:#fff;
-    display: none;
-    top:18%;
-    bottom: 50%;
-    left: 38%;
-    right: 50%;
-    z-index: 100;
-    position: fixed;
-    text-align: center;
-    border: 10px #0E7A0D;
-    border-radius: 5px;
-    color: #0E7A0D;
-    font-family: "Concert One",sans-serif;
-
-
-}*/
-
+/*------Game Rules Modal---------*/
 .modal {
   display: none; 
   position: fixed; 
