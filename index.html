@@ -37,17 +37,21 @@
       You Won!
       <span class="small-text">Click anywhere to dismiss this message</span>
     </div>
-    <div id="gamerules">
+    <div id="myrules" class="modal">
+    <div class="gamerules">
+    <span class="close">&times;</span>
       <p>1.Click on a card to flip it</p>
       <p>2.Match 2 cards with the same image</p>
       <p>3.Repeat until all cards are matched before the timer runs out</p>
-      <p>4.Good luck and have fun!</p></div>
+      <p>4.Good luck and have fun!</p>
+    </div>
+    </div>
     <div class="main-container">
       <div class="timer-info-container">
         <div class="time-info">Timer:<span id="time-left">60</span></div>
         <button id ="start" onclick="disableButton(this)"> Start</button>
         <button id="reStart">Restart</button>
-        <button id="information" onclick="toggleDiv('gamerules')">Rules</button>
+        <button id="information">Rules</button>
       </div>
       <div class="card">
         <div class="card-back card-shared-style">

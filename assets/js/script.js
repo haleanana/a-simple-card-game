@@ -165,7 +165,27 @@ function disableButton(){
 
 }
 
-function toggleDiv(id) {
-    var div = document.getElementById(id);
-    div.style.display = div.style.display == "block" ? "none" : "block";
+//function toggleRules(id) {
+    //let rules = document.getElementById(id);
+    //rules.style.display = rules.style.display == "block" ? "none" : "block";
+//}
+
+//Based on code from w3schools How to Create a Modal Box
+let rules = document.getElementById("myrules");
+let btnForRules = document.getElementById("information");
+let closeBox = document.getElementsByClassName("close")[0];
+
+
+btnForRules.onclick = function() {
+  rules.style.display = "block";
+}
+
+closeBox.onclick = function() {
+  rules.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == rules) {
+    rules.style.display = "none";
+  }
 }
