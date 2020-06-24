@@ -110,24 +110,31 @@ html {
     text-align: center;
 
 }
+
 .time-info {
     font-family: "Concert One",sans-serif;
     color: #0E7A0D;
     font-size: 30px;
 }
 
-#start i{
-    display: none
+#start i {
+    display: none;
+}
+
+#reStart i {
+    display: none;
+}
+
+#information i {
+    display: none;
 }
 
 @media only screen and (max-width: 768px) {
+
   .time-info {
     font-size: 20px
   }
 
-  #start i {
-      display: block;
-  }
 
   .smallscreen {
       display: none;
@@ -137,6 +144,21 @@ html {
       border: none;
       background-color: #fff
   }
+
+  #start i {
+    display: block;
+    color: #0E7A0D
+}
+
+#reStart i {
+    display: block;
+    color: #0E7A0D
+}
+
+#information i {
+    display: block;
+    color:  #0E7A0D
+}
 }
 
 
