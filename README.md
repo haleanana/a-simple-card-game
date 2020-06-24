@@ -1,12 +1,12 @@
 <h2 align ="center">A Simple Card Game</h2>
-<hr>
+
 <p align ="center">Fun,simple and interactive memory game.<br>
  A game designed to improve memory and  kill "waiting times" like waiting for your bus or for your food/coffee order and etc.<br>
  Features include easy to operate controls, a timer to make it challenging and eye catching visuals.</p>
 
 
 ## UX
-<hr>
+
 
 ### Goals
 
@@ -17,7 +17,7 @@ This game is suitable and catered for young adults and adults.
 
 The main target audience of this game are people aged 16+.
 
-Players goals:
+Player goals:
 - Quick time killer 
 - Fun and challenging
 - Helps improve memory
@@ -62,7 +62,7 @@ As a player aged 16+ , what I would want in a game:
 - The primary font used in this website is *Concert one*. This was used because it has a gaming feel but at the same time, a kind of mature feel  to it.
 
 **Gameplay**
--Initially, the number of cards were lower but was increased significantly to provide more challenge.
+- Initially, the number of cards were lower but was increased significantly to provide more challenge.
 
 ### Wireframes
 
@@ -73,7 +73,7 @@ I used Figma to create my mock ups for this project.
 - <a href="https://www.figma.com/proto/IfUFGbuWbM2nSSeQGDbmP3/Untitled?node-id=16%3A198&scaling=scale-down" target="_blank"> Mock up with Lose overlay on mobile.</a>
 
 ## Features
-<hr>
+
 
 ### Exisitng Features
 1. **Screen overlay** 
@@ -107,7 +107,7 @@ I used Figma to create my mock ups for this project.
 - I would like to add a Scoreboard so players can keep track of their games and try beat their highscores. This will add replayabilty to my game.
 
 ## Technologies used
-<hr>
+
 
 **HTML** - To create the structure of the website. <br>
 **CSS** - To add styles and make my website visually appealing.<br>
@@ -117,6 +117,11 @@ I used Figma to create my mock ups for this project.
 **Google Fonts**- To access the fonts that I wanted for this website.<br>
 **Font Awesome**- To access the icons that I wanted for this website.<br>
 **Gitpod**- To write my code using their IDE.<br>
+
+## Testing
+
+
+
 
 
 

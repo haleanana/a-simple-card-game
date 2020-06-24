@@ -138,30 +138,43 @@ html {
 }
 
 .card-shared-style {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
-    backface-visibility:hidden;
-    transition: transform 500ms ease-in-out
+    -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out
 }
-
 .card i {
     font-size: 36px;
     color: #fff;
 }
 
 .card.show-front .card-back{
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
 
 }
 
 .card.show-front .card-front {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
 }
 
 .card-front {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     background:#fff;
     height: 100%;
     position: absolute;
@@ -182,6 +195,7 @@ html {
     position: relative;
     text-align: center;
     transform: rotateY(0);
+    -webkit-transform: rotateY(0);
     background-color: #0E7A0D;
     border-radius: 5px;
 
