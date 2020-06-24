@@ -116,6 +116,30 @@ html {
     font-size: 30px;
 }
 
+#start i{
+    display: none
+}
+
+@media only screen and (max-width: 768px) {
+  .time-info {
+    font-size: 20px
+  }
+
+  #start i {
+      display: block;
+  }
+
+  .smallscreen {
+      display: none;
+  }
+  
+  button {
+      border: none;
+      background-color: #fff
+  }
+}
+
+
 /*---------------Cards---------------*/
 
 .main-container {
@@ -126,7 +150,7 @@ html {
     justify-content: center;
     perspective: 500px;
     margin-top: 0;
-
+    
 }
 
 
@@ -142,14 +166,14 @@ html {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     overflow: hidden;
     -webkit-backface-visibility:hidden;
-            backface-visibility:hidden;
+    backface-visibility:hidden;
     -webkit-transition: -webkit-transform 500ms ease-in-out;
     transition: -webkit-transform 500ms ease-in-out;
     -o-transition: transform 500ms ease-in-out;
@@ -202,8 +226,15 @@ html {
 }
 
 .card-back i:hover {
- transition: transform 1.2s linear;
-  transform: rotate(360deg);
+-webkit-transition: -webkit-transform 1.2s linear;
+transition: -webkit-transform 1.2s linear;
+-o-transition: transform 1.2s linear;
+transition: transform 1.2s linear;
+transition: transform 1.2s linear, -webkit-transform 1.2s linear;
+-webkit-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+transform: rotate(360deg);
+
 }
 
 /*------Game Rules Modal---------*/
