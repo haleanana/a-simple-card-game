@@ -5,6 +5,11 @@
  Features include easy to operate controls, a timer to make it challenging and eye catching visuals.</p>
 
 
+## Demo
+<a href ="https://haleanana.github.io/a-simple-card-game/"target= "_blank">Live Demo</a>
+
+<img src = "">
+
 ## UX
 
 
@@ -120,10 +125,80 @@ I used Figma to create my mock ups for this project.
 
 ## Testing
 
+### Validated through: 
+
+- [W3C Markup Validation]( https://validator.w3.org/) for HTML.
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) for CSS.
+- [JSHint](https://jshint.com/) for JavaScript.
+
+
+**Testing was done by me and 3 other users.**
+Below are the following scenarios that was tested: 
+
+1. **Start ,Restart and Rules buttons**
+- All buttons where tested on different browsers and devices to make sure they work and responsive.
+- Buttons execute the proper command when pressed. For example, pressing "Start" button initiates the countdown timer and disables itself as intended to avoid being pressed again.
+- Buttons pressed multiple times to see if it creates any bugs and or if it breaks the game. (For more info, see [**Bugs**](#bugs) section ).
+- Confirmed that screen overlays are dismissable by clicking anywhere on the screen using touch screen or using a mouse.
+2. **Cards & Gameplay** 
+- Tried to flip more than 2 mismatching cards and confirmed that this is not doable as intended.
+- Matched cards stay revealed as intended.
+- Confirmed that you are unable to click outside of a card to reveal any cards by clicking on non card element.
+- Clicked on the same card multiple times to reveal any hidden bugs (see [**Bugs**](#bugs) section)
+- Mismatching cards stay hidden as intended.
+- Game played on different platforms (iPhone, Samsung s10, iPad, PC) and confirmed that it runs as intended on every platform it was tested on.
+- Cards are shuffled at every new game as intended. 
+3. **Win**
+- Matched every card before timer runs out . This was done over and over again and confirms that "Win" condition executes properly.
+- Win overlay shows as soon as all cards are matched and is dismissable by pressing anywhere as intended.
+4. **Lose**
+- Timer set at 10 seconds to simulate losing with 0 matching cards and confirmed that "Lose"condition executes when timer reaches 0.
+- Timer set at 10 seconds to simulate losing with a few matching cards and confirmed that "Lose" condition executes when timer reaches 0.
+- Lose overlay shows when the timer reaches 0 as inteded.
+- Player unable to flip any further cards when overlay is dismissed as intended. 
+5. **Layout and Design** 
+- Tested on multiple browsers and different devices (see [**Bugs**](#bugs) section)
+- Increased and decreased window size to test responsiveness. 
+6. **Links**
+- Links redirect to the correct page. 
+
+### Further testing###
+1. Friends and relatives are asked to report any bugs they encounter in the future.
+2. Device emulator to be downloaded to test the game on even more platforms.
 
 
 
+## Bugs & Fixes
+1. On the iPhone, the cards when pressed revealed the hidden image before it flipped. 
+- Fixed:  I added -webkit to my classes to fix this issue. 
+2. It was possible to press "Start" button multiple times and this would make the timer run twice as fast.
+- Temporary Fix: Disabled "Start"button once its pressed.
+3. During game over or when the timer reached 0, users were still able to flip cards and continue with the game and still win.
+- Fixed: Statement !this.timeLeft ==0 added to my cardIsFlippable function. This ensures that cards are no longer flippable when timer is at 0.
+```javascript 
+cardIsFlippable(card){ 
+        return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft ==0;
+    }
+```
 
+## Deployment## 
+
+This project was built using Gitpod IDE , commited and published using GitHub.
+
+### To deploy:###
+1. Log into GitHub.
+2. Select haleanana/a-simple-card-game from the list of repositories.
+3. Once the repository has loaded, click on the settings near the top of the page.
+4. Scroll down to the GitHub Pages section.
+5. Click on the drop down menu under Source and select Master Branch.
+6. Once Master Branch is selected, the page will refresh and your link will show up on the GitHub pages section.
+7. Retrieve link.
+
+### To run this project locally ###
+1. Follow this <a href= "https://github.com/haleanana/a-simple-card-game" target = "_blank"> link </a>
+2. Click "Clone or Download". 
+3. Copy the clone URL under the HTTPs section.
+4. In your local IDE,
 
 
 
