@@ -6,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>A Simple Card Game by Hale</title>
-  <script src="https://kit.fontawesome.com/5758f2a779.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  <script src="assets/js/script.js" async></script>
+  
 </head>
 
 <body>
@@ -19,7 +18,9 @@
       </h2>
     </div>
   </div>
-  <div class="screen-overlay show-front">
+
+  <div id="overlay-wrapper" class="screen-overlay show-front">
+  <div id="overlay-text">
     Click anywhere to dismiss this message
     <p>1.Press Start to play</p>
     <p>2.Click on a card to flip it</p>
@@ -27,10 +28,12 @@
     <p>4.Repeat until all cards are matched before the timer runs out</p>
     <p>5.Good luck and have fun!</p>
   </div>
+  </div>
   <div id="game-over-screen" class="screen-overlay">
     Game Over
     <span class="small-text">Click anywhere to dismiss</span>
   </div>
+
   <div id="you-won" class="screen-overlay">
     You Won!
     <span class="small-text">Click anywhere to dismiss this message</span>
@@ -214,7 +217,8 @@
     </div>
   </div>
 
-
+<script src="assets/js/script.js" async></script>
+<script src="https://kit.fontawesome.com/5758f2a779.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

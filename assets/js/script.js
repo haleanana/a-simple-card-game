@@ -1,10 +1,11 @@
-class SimpleMemoryGame {
-  constructor(time, cards) {
-    this.cardsList = cards;
-    this.time = time;
-    this.timeLeft = time;
-    this.timerElement = document.getElementById("time-left");
+const  GAME_TIME = 60
 
+class SimpleMemoryGame {
+  constructor(cards) {
+    this.cardsList = cards;
+    this.time = GAME_TIME;
+    this.timeLeft = GAME_TIME;
+    this.timerElement = document.getElementById("time-left");
   }
 
   startGame() {
@@ -13,8 +14,8 @@ class SimpleMemoryGame {
     this.matches = [];
     this.busy = true;
     setTimeout(() => {
-      this.shuffle(this.cardsList);
-      this.timerStarted = this.startTimer();
+      this.shuffle();
+      this.timer = this.startTimer();
       this.busy = false;
     }, 500);
     this.hideCards();
@@ -31,16 +32,13 @@ class SimpleMemoryGame {
   }
 
 
-  gameOver() {
-    clearInterval(this.timerStarted);
-    document.getElementById("game-over-screen").classList.add("show-front");
+  afterGame(message) {
+    clearInterval(this.timer);
+     document.getElementById("overlay-text").innerHTML = message
+    document.getElementById("overlay-wrapper").classList.add("show-front");
 
   }
 
-  win() {
-    clearInterval(this.timerStarted);
-    document.getElementById("you-won").classList.add("show-front");
-  }
 
   //Timer with if statement to trigger gameOver function when it is equal to 0. 
   //setInterval set at 1000 ms to replicate 1s countdown
@@ -48,7 +46,7 @@ class SimpleMemoryGame {
     return setInterval(() => {
       this.timeLeft -= 1;
       this.timerElement.innerHTML = this.timeLeft;
-      if (this.timeLeft === 0) this.gameOver();
+      if (this.timeLeft === 0) this.afterGame("You Lost!");
 
     }, 1000);
   }
@@ -81,7 +79,7 @@ class SimpleMemoryGame {
   cardMatches(card1, card2) {
     this.matches.push(card1);
     this.matches.push(card2);
-    if (this.matches.length === this.cardsList.length) this.win();
+    if (this.matches.length === this.cardsList.length) this.afterGame("You Win!");
 
 
   }
@@ -125,18 +123,21 @@ if (document.readyState === "loading") {
 
 
 function gameReady() {
-  let overlays = Array.from(document.getElementsByClassName("screen-overlay"));
+  let overlay = document.getElementById("overlay-wrapper");
+  const overlayText = document.getElementById("overlay-text");
   let cards = Array.from(document.getElementsByClassName("card"));
-  let startButton = Array.from(document.querySelectorAll("#start"));
-  let reStartButton = Array.from(document.querySelectorAll("#reStart"))
-  let game = new SimpleMemoryGame(60, cards);
-
-  overlays.forEach(overlay => {
-    overlay.addEventListener("click", () => {
+  let startButton = document.getElementById("start");
+  let reStartButton = document.getElementById("reStart")
+  let game = new SimpleMemoryGame(cards);
+  const timer = this.timer;
+  reStartButton.style.display = "none";
+  
+  
+  overlay.addEventListener("click", () => {
+      overlayText.innerHTML = ""
       overlay.classList.remove("show-front");
-
     });
-  });
+
 
   cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -144,19 +145,23 @@ function gameReady() {
     });
   });
 
-  startButton.forEach(start => {
-    start.addEventListener("click", () => {
+  startButton.addEventListener("click", () => {
+      startButton.style.display = "none";
+      reStartButton.style.display = "initial";
       game.startGame();
     });
-  });
 
-  reStartButton.forEach(start => {
-    start.addEventListener("click", () => {
-      location.reload();
+  reStartButton.addEventListener("click", () => {
+      clearInterval(game.timer);
+      game.timerElement.innerHTML = GAME_TIME;
+      game.time = GAME_TIME;
+      game.timeLeft = GAME_TIME;
+      game.startGame();
+      
     });
-  });
 
 }
+
 
 //Function to disable start button once it is pressed
 function disableButton() {
