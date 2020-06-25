@@ -22,24 +22,24 @@ This game is suitable and catered for young adults and adults.
 The main target audience of this game are people aged 16+.
 
 Player goals:
-- Quick time killer 
-- Fun and challenging
-- Helps improve memory
-- Simple and visually pleasing
-- Easy to use on whatever device you are using
+- Quick time killer. 
+- Fun and challenging.
+- Helps improve memory.
+- Simple and visually pleasing.
+- Easy to use on whatever device you are using.
 
 How this game meets their needs:
-- The look and feel of the game is designed to have a mature feel to it
-- Timer implemented to ensure a quick challenging game
-- Game features more cards than your standard game to help improve memory and also to provide more challenge
-- Game is designed to be responsive on any device
+- The look and feel of the game is designed to have a mature feel to it.
+- Timer implemented to ensure a quick challenging game.
+- Game features more cards than your standard game to help improve memory and also to provide more challenge.
+- Game is designed to be responsive on any device.
 
 ### Goals as a developer
 
-- Learn  and improve my Javascript skills as well as further improve my CSS/HTML skills
-- Expand my portofolio 
-- Satisfy my love for gaming by creating something that I will enjoy playing
-- Provide entertainment to users thats fun and easy to use without encountering any bugs that might ruin their experience
+- Learn  and improve my JavaScript skills as well as further improve my CSS/HTML skills.
+- Expand my portofolio.
+- Satisfy my love for gaming by creating something that I will enjoy playing.
+- Provide entertainment to users thats fun and easy to use without encountering any bugs that might ruin their experience.
 
 ### User stories
 
@@ -131,7 +131,7 @@ I used Figma to create my mock ups for this project.
 - [JSHint](https://jshint.com/) for JavaScript.
 
 
-**Testing was done by me and 3 other users.**
+**Testing was done by me and 4 other users.**
 Below are the following scenarios that was tested: 
 
 1. **Start ,Restart and Rules buttons**
@@ -161,7 +161,7 @@ Below are the following scenarios that was tested:
 6. **Links**
 - Links redirect to the correct page. 
 
-### Further testing###
+### Further testing
 1. Friends and relatives are asked to report any bugs they encounter in the future.
 2. Device emulator to be downloaded to test the game on even more platforms.
 

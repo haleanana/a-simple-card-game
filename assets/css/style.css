@@ -129,10 +129,13 @@ html {
     display: none;
 }
 
+/*--Media screen for timer info and buttons--*/
+
 @media only screen and (max-width: 768px) {
 
   .time-info {
-    font-size: 20px
+    font-size: 20px;
+    margin-bottom: 20px
   }
 
 

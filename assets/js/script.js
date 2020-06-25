@@ -66,7 +66,7 @@ class SimpleMemoryGame {
         }
 
     }
-
+    //Checks card matches by checking if getCardType is equal to cardToCheck through their img file name
     matchedCardChecker (card){
 
         if(this.getCardType(card) === this.getCardType(this.cardToCheck))
@@ -77,7 +77,7 @@ class SimpleMemoryGame {
         this.cardToCheck = null;
 
     }
-
+    //Matching cards are stored into card1 and card2 which will then check if the length is equal to the length of the cards array 
     cardMatches(card1,card2) {
         this.matches.push(card1);
         this.matches.push(card2);
@@ -100,7 +100,7 @@ class SimpleMemoryGame {
     getCardType(card){
         return card.getElementsByClassName("card-match")[0].src;
     }
-
+    //Shuffles the cards by taking a random item in the cards list and swapping the ccs grid list order
     shuffle() {
         
         for(let i = this.cardsList.length -1; i>0; i--) {
@@ -135,7 +135,7 @@ function gameReady() {
     overlays.forEach(overlay => {
         overlay.addEventListener("click",() =>{
             overlay.classList.remove("show-front");
-            //game.startGame();
+            
         });
     });
 
