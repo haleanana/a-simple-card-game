@@ -6,12 +6,11 @@
 
 
 ## Demo
-<a href ="https://haleanana.github.io/a-simple-card-game/"target= "_blank">Live Demo</a>
+<a href= "https://haleanana.github.io/a-simple-card-game/" target= "_blank">Live Demo</a>
 
-<img src = "">
+<img src = "https://github.com/haleanana/a-simple-card-game/blob/master/assets/mockup/demo.PNG" style = "max-width:100%"/>
 
 ## UX
-
 
 ### Goals
 
@@ -199,6 +198,29 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 2. Click "Clone or Download". 
 3. Copy the clone URL under the HTTPs section.
 4. In your local IDE,
+
+## Credits 
+
+[Fontawesome](https://fontawesome.com/) 
+- Icons used for github link and back of the card icons.<br>
+[PNG ALL](http://www.pngall.com/)
+- Images for front of the card.<br>
+[StackOverflow](https://stackoverflow.com/questions/62425382/initiating-gameready-function-on-button-click?noredirect=1#comment110418639_62425382)
+- Helped me solve my problem with gameReady function not initiating when the button is pressed. <br>
+[Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
+- Guided me through the code and helped me understand how the code works in a memory game.<br>
+[W3schools](https://www.w3schools.com/)
+- Used numerous times to help understand errors and solve problems. <br>
+
+### Special Mention:
+
+- Estefi, Hines, Craig & Keitel for helping me test the game extensively and reporting any buys they find.
+- Mentor Femi Medale for his suggestions to help improve my over all website.
+
+### Disclaimer: 
+This entire website is used for educational purpose only.
+
+
 
 
 
