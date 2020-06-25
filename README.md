@@ -4,6 +4,21 @@
  A game designed to improve memory and  kill "waiting times" like waiting for your bus or for your food/coffee order and etc.<br>
  Features include easy to operate controls, a timer to make it challenging and eye catching visuals.</p>
 
+## Tabel of Contents
+
+[**Demo**](#demo)
+
+[**UX**](#ux)
+
+[**Technologies Used**](#technologies-used)
+
+[**Testing**](#testing)
+
+[**Bugs and Fixes**](#bugs-and-fixes)
+
+[**Deployment**](#deployment)
+
+[**Credits**](#credits)
 
 ## Demo
 <a href= "https://haleanana.github.io/a-simple-card-game/" target= "_blank">Live Demo</a>
@@ -137,13 +152,13 @@ Below are the following scenarios that was tested:
 1. **Start ,Restart and Rules buttons**
 - All buttons where tested on different browsers and devices to make sure they work and responsive.
 - Buttons execute the proper command when pressed. For example, pressing "Start" button initiates the countdown timer and disables itself as intended to avoid being pressed again.
-- Buttons pressed multiple times to see if it creates any bugs and or if it breaks the game. (For more info, see [**Bugs**](#bugs) section ).
+- Buttons pressed multiple times to see if it creates any bugs and or if it breaks the game. (For more info, see [**Bugs**](#bugs-and-fixes) section ).
 - Confirmed that screen overlays are dismissable by clicking anywhere on the screen using touch screen or using a mouse.
 2. **Cards & Gameplay** 
 - Tried to flip more than 2 mismatching cards and confirmed that this is not doable as intended.
 - Matched cards stay revealed as intended.
 - Confirmed that you are unable to click outside of a card to reveal any cards by clicking on non card element.
-- Clicked on the same card multiple times to reveal any hidden bugs (see [**Bugs**](#bugs) section)
+- Clicked on the same card multiple times to reveal any hidden bugs (see [**Bugs**](#bugs-and-fixes) section)
 - Mismatching cards stay hidden as intended.
 - Game played on different platforms (iPhone, Samsung s10, iPad, PC) and confirmed that it runs as intended on every platform it was tested on.
 - Cards are shuffled at every new game as intended. 
@@ -156,7 +171,7 @@ Below are the following scenarios that was tested:
 - Lose overlay shows when the timer reaches 0 as inteded.
 - Player unable to flip any further cards when overlay is dismissed as intended. 
 5. **Layout and Design** 
-- Tested on multiple browsers and different devices (see [**Bugs**](#bugs) section)
+- Tested on multiple browsers and different devices (see [**Bugs**](#bugs-and-fixes) section)
 - Increased and decreased window size to test responsiveness. 
 6. **Links**
 - Links redirect to the correct page. 
@@ -167,7 +182,7 @@ Below are the following scenarios that was tested:
 
 
 
-## Bugs & Fixes
+## Bugs and Fixes
 1. On the iPhone, the cards when pressed revealed the hidden image before it flipped. 
 - Fixed:  I added -webkit to my classes to fix this issue. 
 2. It was possible to press "Start" button multiple times and this would make the timer run twice as fast.
@@ -180,11 +195,11 @@ cardIsFlippable(card){
     }
 ```
 
-## Deployment## 
+## Deployment ##
 
 This project was built using Gitpod IDE , commited and published using GitHub.
 
-### To deploy:###
+### To deploy: ###
 1. Log into GitHub.
 2. Select haleanana/a-simple-card-game from the list of repositories.
 3. Once the repository has loaded, click on the settings near the top of the page.
