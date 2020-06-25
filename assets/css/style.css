@@ -1,132 +1,133 @@
 @import url('https://fonts.googleapis.com/css?family=Concert+One:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 
 }
 
 body {
-    margin: 0; 
+  margin: 0;
 }
 
 html {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /*------Overlay Text---------*/
 
-.screen-overlay{
-    display:none;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: "Concert One",sans-serif;
-    font-size: 50px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff
+.screen-overlay {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Concert One", sans-serif;
+  font-size: 50px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff
 }
 
 .screen-overlay p {
-    font-size: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .screen-overlay.show-front {
-    display: flex
+  display: flex
 }
 
 
 
 .small-text {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 @media screen and (max-width: 1117px) {
-   .screen-overlay {
-       text-align: center;
-   }
+  .screen-overlay {
+    text-align: center;
+  }
 }
 
 /*------Navbar---------*/
 #navbar {
-    width: 100%;
-    height: 90px;
-    background-color:#0E7A0D;
+  width: 100%;
+  height: 90px;
+  background-color: #0E7A0D;
 
 }
 
 #navbar h2 {
-    text-align: center;
-    color: #fff
+  text-align: center;
+  color: #fff
 }
 
 #navbar h2 span i {
-    color: #fff;
-    transform: .2s;
+  color: #fff;
+  transform: .2s;
 }
 
 #navbar h2 span i:hover {
-     transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .header-title {
-    padding-top: 30px
+  padding-top: 30px
 }
 
 .header-title h2 span {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 1117px) {
-    #navbar h2 {
-        font-size: 100%;
-    }
+  #navbar h2 {
+    font-size: 100%;
+  }
 
-    footer {
-         bottom: 0
-    }
+  footer {
+    bottom: 0
+  }
 
-    .card {
-        width: 70px !important;
-        height: 90px !important;
+  .card {
+    width: 70px !important;
+    height: 90px !important;
 
-    }
+  }
 }
 
-.start{
-    background: green;
+.start {
+  background: green;
 }
+
 /*---------------Timer---------------*/
 
 .timer-info-container {
-    grid-column: 1/-1;
-    text-align: center;
+  grid-column: 1/-1;
+  text-align: center;
 
 }
 
 .time-info {
-    font-family: "Concert One",sans-serif;
-    color: #0E7A0D;
-    font-size: 30px;
+  font-family: "Concert One", sans-serif;
+  color: #0E7A0D;
+  font-size: 30px;
 }
 
 #start i {
-    display: none;
+  display: none;
 }
 
 #reStart i {
-    display: none;
+  display: none;
 }
 
 #information i {
-    display: none;
+  display: none;
 }
 
 /*--Media screen for timer info and buttons--*/
@@ -135,144 +136,146 @@ html {
 
   .time-info {
     font-size: 20px;
-    margin-bottom: 20px
+    margin-bottom: 30px
   }
 
 
   .smallscreen {
-      display: none;
+    display: none;
   }
-  
+
   button {
-      border: none;
-      background-color: #fff
+    border: none;
+    background-color: #fff
   }
 
   #start i {
     display: block;
     color: #0E7A0D
-}
+  }
 
-#reStart i {
+  #reStart i {
     display: block;
     color: #0E7A0D
-}
+  }
 
-#information i {
+  #information i {
     display: block;
-    color:  #0E7A0D
-}
+    color: #0E7A0D
+  }
 }
 
 
 /*---------------Cards---------------*/
 
 .main-container {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    margin: 50px;
-    justify-content: center;
-    perspective: 500px;
-    margin-top: 0;
-    
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+  margin-top: 0;
+
 }
 
 
 .card {
-    height: 130px;
-    width: 110px;
-    border-radius: 5px;
-    position: relative;
+  height: 130px;
+  width: 110px;
+  border-radius: 5px;
+  position: relative;
 }
 
 .card-shared-style {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    overflow: hidden;
-    -webkit-backface-visibility:hidden;
-    backface-visibility:hidden;
-    -webkit-transition: -webkit-transform 500ms ease-in-out;
-    transition: -webkit-transform 500ms ease-in-out;
-    -o-transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out
-}
-.card i {
-    font-size: 36px;
-    color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  -o-transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out
 }
 
-.card.show-front .card-back{
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+.card i {
+  font-size: 36px;
+  color: #fff;
+}
+
+.card.show-front .card-back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 
 }
 
 .card.show-front .card-front {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
 }
 
 .card-front {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    background:#fff;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    border-radius: 5px;
-    border: 2px solid #0E7A0D;
-    
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  background: #fff;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  border: 2px solid #0E7A0D;
+
 
 }
 
-.card-front img{
-    height: 50%;
-    width: 80%;
+.card-front img {
+  height: 50%;
+  width: 80%;
 }
+
 .card-back {
-    justify-content: center;
-    height: 100%;
-    position: relative;
-    text-align: center;
-    transform: rotateY(0);
-    -webkit-transform: rotateY(0);
-    background-color: #0E7A0D;
-    border-radius: 5px;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  background-color: #0E7A0D;
+  border-radius: 5px;
 
 }
 
 .card-back i:hover {
--webkit-transition: -webkit-transform 1.2s linear;
-transition: -webkit-transform 1.2s linear;
--o-transition: transform 1.2s linear;
-transition: transform 1.2s linear;
-transition: transform 1.2s linear, -webkit-transform 1.2s linear;
--webkit-transform: rotate(360deg);
--ms-transform: rotate(360deg);
-transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 1.2s linear;
+  transition: -webkit-transform 1.2s linear;
+  -o-transition: transform 1.2s linear;
+  transition: transform 1.2s linear;
+  transition: transform 1.2s linear, -webkit-transform 1.2s linear;
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 
 }
 
 /*------Game Rules Modal---------*/
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+  display: none;
+  position: fixed;
+  z-index: 1;
   padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background: rgba(0, 0, 0, 0.8);
   color: #0E7A0D
 }
@@ -286,8 +289,8 @@ transform: rotate(360deg);
   width: 50%;
   border-radius: 5px;
   text-align: center;
-  font-family: "Concert One",sans-serif;
-  
+  font-family: "Concert One", sans-serif;
+
 }
 
 
@@ -304,4 +307,3 @@ transform: rotate(360deg);
   text-decoration: none;
   cursor: pointer;
 }
-
