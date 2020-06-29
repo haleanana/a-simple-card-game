@@ -23,7 +23,7 @@
 ## Demo
 <a href= "https://haleanana.github.io/a-simple-card-game/" target= "_blank">Live Demo</a>
 
-<img src = "https://github.com/haleanana/a-simple-card-game/blob/master/assets/mockup/demo.PNG" style = "max-width:100%"/>
+<img src = "https://github.com/haleanana/a-simple-card-game/blob/master/assets/mockup/demo1.PNG" style = "max-width:100%"/>
 
 ## UX
 
@@ -118,6 +118,7 @@ I used Figma to create my mock ups for this project.
 ### Features left to implement 
 1. **Restructuring of the restart button**
 - At the moment, this feature is achieved by reloading the whole page. I would like to recode this in the future so that it will restart the game without having to reload the page.
+- **Update**: Restart recoded with the help of my Mentor and now restart button doesnt simply reload the page. Restart button clears the timer and reshuffles the deck.
 
 2. **Adding a difficulty level**
 - Add another level to the game a player can select where it will be more diffult and more challenging. Perhaps I can increase the number of the cards or decrease the timer.
@@ -187,6 +188,7 @@ Below are the following scenarios that was tested:
 - Fixed:  I added -webkit to my classes to fix this issue. 
 2. It was possible to press "Start" button multiple times and this would make the timer run twice as fast.
 - Temporary Fix: Disabled "Start"button once its pressed.
+- Update: Start button now completely disappears and is replaced with a restart button. This should improve user experience compared to the disabled button.
 3. During game over or when the timer reached 0, users were still able to flip cards and continue with the game and still win.
 - Fixed: Statement !this.timeLeft ==0 added to my cardIsFlippable function. This ensures that cards are no longer flippable when timer is at 0.
 ```javascript 
@@ -194,6 +196,8 @@ cardIsFlippable(card){
         return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft ==0;
     }
 ```
+4. When played on Samsung phones, the timer and button seem to overlap. Doesnt show on Chrome developer tools. 
+- Temporary fix: Added margin to push buttons further down.
 
 ## Deployment ##
 
@@ -212,10 +216,10 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 1. Follow this <a href= "https://github.com/haleanana/a-simple-card-game" target = "_blank"> link </a>
 2. Click "Clone or Download". 
 3. Copy the clone URL under the HTTPs section.
-4. In your local IDE,
+4. Run the files in your local IDE.
 
 ## Credits 
-
+<br>
 [Fontawesome](https://fontawesome.com/) 
 - Icons used for github link and back of the card icons.<br>
 [PNG ALL](http://www.pngall.com/)
