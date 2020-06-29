@@ -39,7 +39,7 @@ start of a game*/
   //Triggers the class overlay-wrapper and display either Win or Lose message
   afterGame(message) {
     clearInterval(this.timer);
-     document.getElementById("overlay-text").innerHTML = message
+    document.getElementById("overlay-text").innerHTML = message
     document.getElementById("overlay-wrapper").classList.add("show-front");
 
   }
@@ -171,12 +171,6 @@ function gameReady() {
 
 }
 
-
-//Function to disable start button once it is pressed
-function disableButton() {
-  document.getElementById("start").disabled = true;
-
-}
 
 //Based on code from w3schools How to Create a Modal Box
 btnForRules.onclick = function() {
