@@ -219,17 +219,27 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 4. Run the files in your local IDE.
 
 ## Credits 
-<br>
+
 [Fontawesome](https://fontawesome.com/) 
-- Icons used for github link and back of the card icons.<br>
+- Icons used for github link and back of the card icons.
+
+
 [PNG ALL](http://www.pngall.com/)
-- Images for front of the card.<br>
+- Images for front of the card.
+
+
 [StackOverflow](https://stackoverflow.com/questions/62425382/initiating-gameready-function-on-button-click?noredirect=1#comment110418639_62425382)
-- Helped me solve my problem with gameReady function not initiating when the button is pressed. <br>
+- Helped me solve my problem with gameReady function not initiating when the button is pressed.
+
+
 [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
-- Guided me through the code and helped me understand how the code works in a memory game.<br>
+
+
+- Guided me through the code and helped me understand how the code works in a memory game.
+
+
 [W3schools](https://www.w3schools.com/)
-- Used numerous times to help understand errors and solve problems. <br>
+- Used numerous times to help understand errors and solve problems. 
 
 ### Special Mention:
 

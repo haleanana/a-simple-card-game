@@ -1,5 +1,9 @@
 const  GAME_TIME = 60
+const rules = document.getElementById("myrules");
+const btnForRules = document.getElementById("information");
+const closeBox = document.getElementsByClassName("close")[0];
 
+//Class created with methods for gameplay
 class SimpleMemoryGame {
   constructor(cards) {
     this.cardsList = cards;
@@ -7,7 +11,8 @@ class SimpleMemoryGame {
     this.timeLeft = GAME_TIME;
     this.timerElement = document.getElementById("time-left");
   }
-
+/*This method calls other methods such as the shuffle method at 
+start of a game*/
   startGame() {
     this.cardToCheck = null;
     this.timeLeft = this.time;
@@ -22,8 +27,8 @@ class SimpleMemoryGame {
     this.timerElement.innerText = this.timeLeft;
   }
 
-  //Goes through all the cards to remove the "show-front" class at the start of every game
-
+  /*Goes through all the cards to remove the "show-front" 
+  class at the start of every game*/
   hideCards() {
     this.cardsList.forEach(card => {
       card.classList.remove("show-front");
@@ -31,7 +36,7 @@ class SimpleMemoryGame {
 
   }
 
-
+  //Triggers the class overlay-wrapper and display either Win or Lose message
   afterGame(message) {
     clearInterval(this.timer);
      document.getElementById("overlay-text").innerHTML = message
@@ -51,7 +56,8 @@ class SimpleMemoryGame {
     }, 1000);
   }
 
-  //Function to check whether card can be flipped by checking other functions as conditions with an if statement 
+  /*Function to check whether a card can be flipped by checking other 
+  functions as conditions with an if statement */
   flip(card) {
     if (this.cardIsFlippable(card)) {
       card.classList.add("show-front");
@@ -64,7 +70,8 @@ class SimpleMemoryGame {
     }
 
   }
-  //Checks card matches by checking if getCardType is equal to cardToCheck through their img file name
+  /*Checks card matches by checking if getCardType is equal to
+   cardToCheck through their img file name*/
   matchedCardChecker(card) {
 
     if (this.getCardType(card) === this.getCardType(this.cardToCheck))
@@ -75,7 +82,8 @@ class SimpleMemoryGame {
     this.cardToCheck = null;
 
   }
-  //Matching cards are stored into card1 and card2 which will then check if the length is equal to the length of the cards array 
+  /*Matching cards are stored into card1 and card2 which will then 
+  check if the length is equal to the length of the cards array*/
   cardMatches(card1, card2) {
     this.matches.push(card1);
     this.matches.push(card2);
@@ -83,7 +91,7 @@ class SimpleMemoryGame {
 
 
   }
-
+  //This method hides the cards again when they do not match
   cardDoesNotMatch(card1, card2) {
     this.busy = true;
     setTimeout(() => {
@@ -93,11 +101,12 @@ class SimpleMemoryGame {
     }, 1000)
 
   }
-
+  //Identifies the cards by their file name
   getCardType(card) {
     return card.getElementsByClassName("card-match")[0].src;
   }
-  //Shuffles the cards by taking a random item in the cards list and swapping the ccs grid list order
+  /*Shuffles the cards by taking a random item in the cards list 
+  and swapping the ccs grid list order*/
   shuffle() {
 
     for (let i = this.cardsList.length - 1; i > 0; i--) {
@@ -106,9 +115,10 @@ class SimpleMemoryGame {
       this.cardsList[i].style.order = randomise;
     }
   }
-  // Function to check if the user can flip the card
+  /*Function to check if the user can flip the card
+  All statements need to return false in order for it to 
+  be true so they can flip the card*/
   cardIsFlippable(card) {
-    //All statements need to return false in order for it to be true so they can flip the card
     return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft == 0;
   }
 
@@ -121,7 +131,6 @@ if (document.readyState === "loading") {
   gameReady();
 }
 
-
 function gameReady() {
   let overlay = document.getElementById("overlay-wrapper");
   const overlayText = document.getElementById("overlay-text");
@@ -132,25 +141,25 @@ function gameReady() {
   const timer = this.timer;
   reStartButton.style.display = "none";
   
-  
+  //To dismiss overlay message after page loads
   overlay.addEventListener("click", () => {
       overlayText.innerHTML = ""
       overlay.classList.remove("show-front");
     });
 
-
+  //Makes the cards clickable 
   cards.forEach(card => {
     card.addEventListener("click", () => {
       game.flip(card);
     });
   });
-
+  //starts the game after the button is clicked
   startButton.addEventListener("click", () => {
       startButton.style.display = "none";
       reStartButton.style.display = "initial";
       game.startGame();
     });
-
+  //restarts the game after the button is clicked
   reStartButton.addEventListener("click", () => {
       clearInterval(game.timer);
       game.timerElement.innerHTML = GAME_TIME;
@@ -170,11 +179,6 @@ function disableButton() {
 }
 
 //Based on code from w3schools How to Create a Modal Box
-let rules = document.getElementById("myrules");
-let btnForRules = document.getElementById("information");
-let closeBox = document.getElementsByClassName("close")[0];
-
-
 btnForRules.onclick = function() {
   rules.style.display = "block";
 }
