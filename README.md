@@ -4,7 +4,7 @@
  A game designed to improve memory and  kill "waiting times" like waiting for your bus or for your food/coffee order and etc.<br>
  Features include easy to operate controls, a timer to make it challenging and eye catching visuals.</p>
 
-## Tabel of Contents
+## Table of Contents
 
 [**Demo**](#demo)
 
@@ -91,6 +91,8 @@ I used Figma to create my mock ups for this project.
 - <a href="https://www.figma.com/proto/IfUFGbuWbM2nSSeQGDbmP3/Untitled?node-id=16%3A6&scaling=scale-down" target="_blank"> Mock up with Win overlay on Tablet.</a>
 - <a href="https://www.figma.com/proto/IfUFGbuWbM2nSSeQGDbmP3/Untitled?node-id=16%3A198&scaling=scale-down" target="_blank"> Mock up with Lose overlay on mobile.</a>
 
+[**back to top**](#table-of-contents)
+
 ## Features
 
 
@@ -126,6 +128,8 @@ I used Figma to create my mock ups for this project.
 3. **Scoreboard**
 - I would like to add a Scoreboard so players can keep track of their games and try beat their highscores. This will add replayabilty to my game.
 
+[**back to top**](#table-of-contents)
+
 ## Technologies used
 
 
@@ -137,6 +141,8 @@ I used Figma to create my mock ups for this project.
 **Google Fonts**- To access the fonts that I wanted for this website.<br>
 **Font Awesome**- To access the icons that I wanted for this website.<br>
 **Gitpod**- To write my code using their IDE.<br>
+
+[**back to top**](#table-of-contents)
 
 ## Testing
 
@@ -181,7 +187,7 @@ Below are the following scenarios that was tested:
 1. Friends and relatives are asked to report any bugs they encounter in the future.
 2. Device emulator to be downloaded to test the game on even more platforms.
 
-
+[**back to top**](#table-of-contents)
 
 ## Bugs and Fixes
 1. On the iPhone, the cards when pressed revealed the hidden image before it flipped. 
@@ -198,6 +204,8 @@ cardIsFlippable(card){
 ```
 4. When played on Samsung phones, the timer and button seem to overlap. Doesnt show on Chrome developer tools. 
 - Temporary fix: Added margin to push buttons further down.
+
+[**back to top**](#table-of-contents)
 
 ## Deployment ##
 
@@ -217,6 +225,8 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 2. Click "Clone or Download". 
 3. Copy the clone URL under the HTTPs section.
 4. Run the files in your local IDE.
+
+[**back to top**](#table-of-contents)
 
 ## Credits 
 
@@ -249,7 +259,7 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 ### Disclaimer: 
 This entire website is used for educational purpose only.
 
-
+[**back to top**](#table-of-contents)
 
 
 
