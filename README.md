@@ -25,6 +25,7 @@
 
 <img src = "https://github.com/haleanana/a-simple-card-game/blob/master/assets/mockup/demo1.PNG" style = "max-width:100%"/>
 
+[**back to top**](#table-of-contents)
 ## UX
 
 ### Goals
@@ -204,6 +205,8 @@ cardIsFlippable(card){
 ```
 4. When played on Samsung phones, the timer and button seem to overlap. Doesnt show on Chrome developer tools. 
 - Temporary fix: Added margin to push buttons further down.
+5. When restart button is clicked multiple times really fast, the timer countdown goes twice as fast and timer goes to negative.
+- Unsolved: Tried to implement clearInterval() and setTimeout() but so far no solution has been found.
 
 [**back to top**](#table-of-contents)
 
