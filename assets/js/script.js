@@ -173,14 +173,15 @@ function gameReady() {
 
 
 //Based on code from w3schools How to Create a Modal Box
+//Displays the rules on click
 btnForRules.onclick = function() {
   rules.style.display = "block";
 }
-
+//Closes the rules when "x" is pressed
 closeBox.onclick = function() {
   rules.style.display = "none";
 }
-
+//Closes the rules if anywhere else on the window is clicked
 window.onclick = function(event) {
   if (event.target == rules) {
     rules.style.display = "none";
