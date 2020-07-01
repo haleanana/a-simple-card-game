@@ -152,6 +152,14 @@ I used Figma to create my mock ups for this project.
 - [W3C Markup Validation]( https://validator.w3.org/) for HTML.
 - [W3C CSS validation](https://jigsaw.w3.org/css-validator/) for CSS.
 - [JSHint](https://jshint.com/) for JavaScript.
+- [Autoprefixer CSS]( https://autoprefixer.github.io/) for browser compatibility.
+
+### Tested through:
+
+- Google Lighthouse
+- [Mobile Friendly Test]( https://search.google.com/test/mobile-friendly?id=cErBlLKhLhSe_SlDTsC0nQ)
+- Chrome developer tools
+- MS Edge, Chrome, Safari 
 
 
 **Testing was done by me and 4 other users.**

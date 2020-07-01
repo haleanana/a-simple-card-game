@@ -264,6 +264,13 @@ html {
 
 }
 
+
+@-moz-document url-prefix() { 
+      .card-front img {
+         width:80%;
+            }
+  }
+
 /*------Game Rules Modal---------*/
 .modal {
   display: none;
