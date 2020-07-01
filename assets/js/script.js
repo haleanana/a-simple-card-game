@@ -1,4 +1,4 @@
-const GAME_TIME = 60
+const GAME_TIME = 60;
 const rules = document.getElementById("myrules");
 const btnForRules = document.getElementById("information");
 const closeBox = document.getElementsByClassName("close")[0];
@@ -40,7 +40,7 @@ class SimpleMemoryGame {
  //Triggers the class overlay-wrapper and display either Win or Lose message
  afterGame(message) {
   clearInterval(this.timer);
-  document.getElementById("overlay-text").innerHTML = message
+  document.getElementById("overlay-text").innerHTML = message;
   document.getElementById("overlay-wrapper").classList.add("show-front");
 
  }
@@ -99,7 +99,7 @@ class SimpleMemoryGame {
    card1.classList.remove("show-front");
    card2.classList.remove("show-front");
    this.busy = false;
-  }, 1000)
+  }, 1000);
 
  }
  //Identifies the cards by their file name
@@ -137,14 +137,14 @@ function gameReady() {
  const overlayText = document.getElementById("overlay-text");
  let cards = Array.from(document.getElementsByClassName("card"));
  let startButton = document.getElementById("start");
- let reStartButton = document.getElementById("reStart")
+ let reStartButton = document.getElementById("reStart");
  let game = new SimpleMemoryGame(cards);
  const timer = this.timer;
  reStartButton.style.display = "none";
 
  //To dismiss overlay message after page loads
  overlay.addEventListener("click", () => {
-  overlayText.innerHTML = ""
+  overlayText.innerHTML = "";
   overlay.classList.remove("show-front");
  });
 
@@ -181,14 +181,14 @@ function gameReady() {
 //Displays the rules on click
 btnForRules.onclick = function() {
  rules.style.display = "block";
-}
+};
 //Closes the rules when "x" is pressed
 closeBox.onclick = function() {
  rules.style.display = "none";
-}
+};
 //Closes the rules if anywhere else on the window is clicked
 window.onclick = function(event) {
  if (event.target == rules) {
   rules.style.display = "none";
  }
-}
+};
