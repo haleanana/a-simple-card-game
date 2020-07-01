@@ -159,7 +159,7 @@ I used Figma to create my mock ups for this project.
 - Google Lighthouse
 - [Mobile Friendly Test]( https://search.google.com/test/mobile-friendly?id=cErBlLKhLhSe_SlDTsC0nQ)
 - Chrome developer tools
-- MS Edge, Chrome, Safari 
+- [BrowserStack](https://www.browserstack.com/)
 
 
 **Testing was done by me and 4 other users.**
@@ -216,6 +216,8 @@ cardIsFlippable(card){
 5. When restart button is clicked multiple times really fast, the timer countdown goes twice as fast and timer goes to negative.
 - Unsolved: Tried to implement clearInterval() and setTimeout() but so far no solution has been found.
 - Update: Temporary fix implemented. Added a setTimeout function to disable restart button for 3 seconds to prevent clicking it consecutively which was causing the bug.
+6. Some cards would shrink in width when using Safari browser. 
+- Fixed: Removed height property on .card-front img  as this was what was causing the bug.
 
 [**back to top**](#table-of-contents)
 
