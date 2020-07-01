@@ -3,6 +3,7 @@ const rules = document.getElementById("myrules");
 const btnForRules = document.getElementById("information");
 const closeBox = document.getElementsByClassName("close")[0];
 
+
 //Class created with methods for gameplay
 class SimpleMemoryGame {
  constructor(cards) {
@@ -162,10 +163,16 @@ function gameReady() {
  //restarts the game after the button is clicked
  reStartButton.addEventListener("click", () => {
   clearInterval(game.timer);
+  reStartButton.disabled = true;
+  setTimeout(function(){
+      reStartButton.disabled=false;
+  },3000);
   game.timerElement.innerHTML = GAME_TIME;
   game.time = GAME_TIME;
   game.timeLeft = GAME_TIME;
   game.startGame();
+
+  console.log(setTimeout)
 
  });
 
