@@ -148,7 +148,7 @@ function gameReady() {
   overlay.classList.remove("show-front");
  });
 
- //Makes the cards clickable 
+ //Makes the cards clickable
  cards.forEach(card => {
   card.addEventListener("click", () => {
    game.flip(card);
@@ -178,15 +178,16 @@ function gameReady() {
 
 
 //Based on code from w3schools How to Create a Modal Box
-//Displays the rules on click
+//Displays the rules on click by setting display to block
 btnForRules.onclick = function() {
  rules.style.display = "block";
 };
-//Closes the rules when "x" is pressed
+//Closes the rules when "x" is pressed by setting display to none
 closeBox.onclick = function() {
  rules.style.display = "none";
 };
-//Closes the rules if anywhere else on the window is clicked
+/*Closes the rules if anywhere else on the window is clicked by
+setting display to none when clicked*/
 window.onclick = function(event) {
  if (event.target == rules) {
   rules.style.display = "none";
