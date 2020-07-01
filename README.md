@@ -207,6 +207,7 @@ cardIsFlippable(card){
 - Temporary fix: Added margin to push buttons further down.
 5. When restart button is clicked multiple times really fast, the timer countdown goes twice as fast and timer goes to negative.
 - Unsolved: Tried to implement clearInterval() and setTimeout() but so far no solution has been found.
+- Update: Temporary fix implemented. Added a setTimeout function to disable restart button for 3 seconds to prevent clicking it consecutively which was causing the bug.
 
 [**back to top**](#table-of-contents)
 

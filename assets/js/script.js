@@ -172,8 +172,6 @@ function gameReady() {
   game.timeLeft = GAME_TIME;
   game.startGame();
 
-  console.log(setTimeout)
-
  });
 
 }
