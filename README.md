@@ -213,10 +213,12 @@ cardIsFlippable(card){
 ```
 4. When played on Samsung phones, the timer and button seem to overlap. Doesnt show on Chrome developer tools. 
 - Fixed: Added margin to push buttons further down.
-5. When restart button is clicked multiple times really fast, the timer countdown goes twice as fast and timer goes to negative.
+5. When restart button is clicked multiple times really fast, the timer countdown goes twice as fast and timer goes to negative. 
 - Unsolved: Tried to implement clearInterval() and setTimeout() but so far no solution has been found.
 - Update: Temporary fix implemented. Added a setTimeout function to disable restart button for 3 seconds to prevent clicking it consecutively which was causing the bug.
-6. Some cards would shrink in width when using Firefox browser. 
+6. Similar case happens when restart button is pressed right after the start button is pressed, the countdown timer will also countdown twice as fast.
+- Fixed: Implemented restart button timeout on startButton function so it disables the button momentarily to prevent double clicking it. 
+7. Some cards would shrink in width when using Firefox browser. 
 - Fixed: Removed height property on .card-front img  as this was what was causing the bug and only slightly alters the images on other browsers.
 
 [**back to top**](#table-of-contents)
