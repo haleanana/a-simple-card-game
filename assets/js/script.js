@@ -156,6 +156,10 @@ function gameReady() {
  });
  //starts the game after the button is clicked
  startButton.addEventListener("click", () => {
+  reStartButton.disabled = true;
+  setTimeout(function(){
+      reStartButton.disabled=false;
+  },1000);
   startButton.style.display = "none";
   reStartButton.style.display = "initial";
   game.startGame();
@@ -166,7 +170,7 @@ function gameReady() {
   reStartButton.disabled = true;
   setTimeout(function(){
       reStartButton.disabled=false;
-  },3000);
+  },2000);
   game.timerElement.innerHTML = GAME_TIME;
   game.time = GAME_TIME;
   game.timeLeft = GAME_TIME;
