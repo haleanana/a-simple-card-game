@@ -65,7 +65,10 @@ button {
     border-radius: 5px;
     border-style: none;
 
+}
 
+button:hover{
+    transform: scale(1.1)
 }
 
 /*------Navbar---------*/
