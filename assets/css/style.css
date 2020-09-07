@@ -54,6 +54,20 @@ html {
   }
 }
 
+/*------Buttons---------*/
+
+button {
+    background-color: #0E7A0D;
+    color: #fff;
+    font-family: 'Concert-one', sans-serif;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+
+
+}
+
 /*------Navbar---------*/
 #navbar {
   width: 100%;

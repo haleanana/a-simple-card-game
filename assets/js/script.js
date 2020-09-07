@@ -3,7 +3,6 @@ const rules = document.getElementById("myrules");
 const btnForRules = document.getElementById("information");
 const closeBox = document.getElementsByClassName("close")[0];
 
-
 //Class created with methods for gameplay
 class SimpleMemoryGame {
  constructor(cards) {
