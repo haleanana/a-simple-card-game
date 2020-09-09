@@ -119,7 +119,7 @@ class SimpleMemoryGame {
  All statements need to return false in order for it to 
  be true so they can flip the card*/
  cardIsFlippable(card) {
-  return !this.busy && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft == 0;
+  return !this.busy && this.matches && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft == 0;
  }
 
 }
