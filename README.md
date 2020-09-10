@@ -220,6 +220,15 @@ cardIsFlippable(card){
 - Fixed: Implemented restart button timeout on startButton function so it disables the button momentarily to prevent double clicking it. 
 7. Some cards would shrink in width when using Firefox browser. 
 - Fixed: Removed height property on .card-front img  as this was what was causing the bug and only slightly alters the images on other browsers.
+8. Favicon error 404.
+- Fixed: Added Favicon image to address the error and prevent future errors.
+9. When timer hasnt started, if you press the cards, console shows errors "Cannot read property "includes" of undefined".
+- Fixed: By adding this.matches, it is no longer undefined for when this.matches.includes executes.
+```javascript
+cardIsFlippable(card){ 
+        return !this.busy && this.matches && !this.matches.includes(card) && card !== this.cardToCheck && !this.timeLeft ==0;
+    }
+```
 
 [**back to top**](#table-of-contents)
 
