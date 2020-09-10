@@ -278,7 +278,7 @@ This project was built using Gitpod IDE , commited and published using GitHub.
 
 ### Special Mention:
 
-- Estefi, Hines, Craig & Keitel for helping me test the game extensively and reporting any buys they find.
+- Estefi, Hines, Craig & Keitel for helping me test the game extensively and reporting any bugs they find.
 - Mentor Femi Medale for his suggestions to help improve my over all website.
 
 ### Disclaimer: 
